@@ -1,0 +1,37 @@
+// Question 1
+
+let n = 1234;
+
+let reverse = 0;
+while (n != 0) {
+  reverse = reverse * 10 + (n % 10);
+  n = Math.floor(n / 10);
+}
+
+console.log(reverse);
+
+
+
+
+
+//Question 2
+
+let total_classes = 250;
+let attended_classes = 150;
+let medical_cause = "N";
+
+let attendance = attended_classes / total_classes * 100;
+
+if (medical_cause === "Y") {
+  if (attendance >= 60) {
+    console.log("True");
+  } else {
+    console.log("False");
+  }
+} else {
+  if (attendance >= 75) {
+    console.log("True");
+  } else {
+    console.log("False");
+  }
+}
