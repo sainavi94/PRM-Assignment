@@ -1,0 +1,17 @@
+//SQL Question 1
+
+
+CREATE TABLE countries (
+  country_id INT PRIMARY KEY,
+  country_name VARCHAR(50) NOT NULL,
+  region_id INT,
+  CHECK (country_name IN ('Italy', 'India', 'China'))
+);
+
+
+//SQL Question 2
+
+CREATE TABLE country_new AS
+SELECT * FROM countries;
+CREATE TABLE country_new LIKE countries;
+INSERT INTO country_new SELECT * FROM countries;
